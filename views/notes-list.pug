@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h2(class='header__secondary') List of tasks
+  nav(class="navigation")
+    ul(class="navigation__container")
+      li(class="navigation__item")
+        a(href='http://localhost:3000' class="navigation__anchor") Home   
+      li(class="navigation__item")
+        a(href="http://localhost:3000/note-create" class="navigation__anchor") New Task
+
+  section(class="container")
+    if(!!tasks.length) 
+      ul(class="items-list")
+        each task in tasks
+          li(class="items-list__row")
+            div(class="item-list__header")
+              p(class="item-list__header-name") ##{task.id} ▶ #{task.title}
+              p(class=`item-list__header-category category--${task.category}`) #{task.category}
+              if(!!Number(task.status))
+                p(class=`item-list__header-status--${!!Number(task.status)}`) +
+              else  
+                p(class=`item-list__header-status--${!!Number(task.status)}`) x
+            div(class="item-list__content")
+              a(href=`http://localhost:3000/note-detail/${task.id}`) #{task.description}
+    else
+      p Empty list

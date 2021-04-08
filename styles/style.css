@@ -1,0 +1,326 @@
+.wrapper {
+    font-family: 'JetBrains Mono';
+    margin: 2rem auto;
+    width: 75vw;
+}
+
+.header__primary {
+    color: red;
+    text-align: center;
+}
+
+.header__secondary {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.navigation {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.navigation__container {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    width: 25%;
+}
+
+.navigation__item {
+    align-items: center;
+    border-radius: .25rem;
+    border: 1px solid;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    width: 45%;
+}
+
+.navigation__anchor {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    width: 50%;
+}
+
+.items-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.items-list__row {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    padding: .5rem 0;
+}
+
+.item-list__header {
+    align-items: center;
+    color: rgba(0, 0, 0, .75);
+    display: flex;
+    font-weight: bold;
+    height: 2rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.item-list__header-name {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: .25rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    display: flex;
+    height: 100%;
+    padding-left: .5rem;
+    width: 60%;
+}
+
+.item-list__header-category {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 25%;
+}
+
+.item-list__description {
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: .25rem;
+    margin: 1rem auto;
+    padding: 1rem;;
+    width: 90%;
+}
+
+.item-list__header-status--true {
+    align-items: center;
+    background-color: green;
+    border-radius: .25rem;
+    color: white;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 100%;
+    justify-content: center;
+    width: 5%;
+}
+
+.item-list__header-status--false {
+    align-items: center;
+    background-color: red;
+    border-radius: .25rem;
+    color: white;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+    height: 100%;
+    justify-content: center;
+    width: 5%;
+}
+
+.category--frontend {
+    background-color: rgba(255, 0, 0, .25);
+    border-radius: .25rem;
+    border: 1px solid rgba(255, 0, 0, .25);
+    color: rgba(255, 0, 0, 1);
+    height: 100%;
+}
+
+.category--backend {
+    background-color: rgba(0, 78, 0, .25);
+    border-radius: .25rem;
+    border: 1px solid rgba(0, 78, 0, .25);
+    color: rgba(0, 78, 0, 1);
+    height: 100%;
+}
+
+.category--devops {
+    background-color: rgba(0, 0, 255, .25);
+    border-radius: .25rem;
+    border: 1px solid rgba(0, 0, 255, .25);
+    color: rgba(0, 0, 255, 1);
+    height: 100%;
+}
+
+.category--qa {
+    background-color: rgba(130, 0, 253, .25);
+    border-radius: .25rem;
+    border: 1px solid rgba(130, 0, 253, .25);
+    color: rgba(130, 0, 253, 1);
+    height: 100%;
+}
+
+.category--management {
+    background-color: rgba(252, 154, 45, .25);
+    border-radius: .25rem;
+    border: 1px solid rgba(252, 154, 45, .25);
+    color: rgba(252, 154, 45, 1);
+    height: 100%;
+}
+
+.inputBox {
+    border-style: hidden;
+    background-color: #eee;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: .5rem;
+    color: rgba(0, 0, 0, .65);
+}
+
+.inputBox:focus {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: solid;
+    outline: none;
+}
+
+.textareaBox {
+    background-color: #eee;
+    border: none;
+    color: rgba(0, 0, 0, .65);
+    font-family: inherit;
+    font-size: 1.15rem;
+    height: 8rem;
+    padding: .5rem;
+    resize: none;
+    width: 100%;
+}
+
+.textareaBox:focus {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.section-header {
+    align-items: center;
+    color: rgba(0, 0, 0, .65);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+}
+
+.section-header__title {
+    border-top: 1px solid #00000088;
+    border-bottom: 1px solid #00000088;
+    margin: 0;
+    padding: .25rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.nav__button-set {
+    padding: 0;
+    list-style: none;
+}
+
+.form {
+    width: 100%;
+}
+
+.form__block {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.form__label {
+    border-left: 10px solid #999494;
+    color: rgba(0, 0, 0, .75);
+    font-weight: bold;
+    margin-bottom: .75rem;
+    padding-left: .5rem;
+}
+
+.form__select {
+    color: rgba(0, 0, 0, .65);
+    font-family: inherit;
+    height: 2rem;
+    width: 100%;
+    padding: 0 0 0 .5rem;
+}
+
+.form__option {
+    color: rgba(0, 0, 0, .65);
+}
+
+.button {
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+    outline: none;
+    padding: 0 .5rem;
+}
+
+.button--back {
+    background-color: #0275d8CC;
+    border-radius: 10%;
+    border: none;
+    color: white;
+    height: 45px;
+    width: auto;
+}
+
+.button--back:hover {
+    background-color: #0275d8;
+}
+
+.button--submit {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    height: 45px;
+    width: 100%;
+}
+
+.button--submit:hover {
+    background-color: #46a046;
+}
+
+.button--edit {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    height: 45px;
+    width: 45%;
+}
+
+.button--edit .button {
+    background-color: inherit;
+    border: none;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+}
+
+.button--edit:hover {
+    background-color: #46a046;
+}
+
+.button--delete {
+    background-color: #D9534FCC;
+    border: none;
+    color: white;
+    height: 45px;
+    width: 45%;
+}
+
+.button--delete:hover {
+    background-color: #D9534F;
+}

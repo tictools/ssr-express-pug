@@ -1,0 +1,42 @@
+extends layout
+include ../components/nav-button
+
+block content
+
+  section(class='container')
+    if task
+      - const status = !!Number(task.status) ? 'Completed' : 'Pending'
+      div(class='section-header')
+        h2(class='section-header__title') TASK DETAILS
+      h3 #{task.title}
+      p(class=`item-list__header-category category--${task.category}`) #{task.category}
+      p(class="item-list__description")  #{task.description}
+      if(!!Number(task.status))
+        p(class=`item-list__header-status--${!!Number(task.status)}`) +
+      else 
+        p(class=`item-list__header-status--${!!Number(task.status)}`) x
+    else
+      p Task not available
+
+    div(class="navigation")
+      a(class="button button--edit" href=`http://localhost:3000/note-update/${task.id}`)
+        button(class='button')
+          i(class="far fa-edit")
+      button(class="button button--delete")
+        i(class="fa fa-trash-alt")
+    +navButton('Back', '/notes')
+
+  script.
+    const deleteButton = document.querySelector('.button--delete')
+    deleteButton.addEventListener('click', function(e){
+      e.preventDefault()
+
+      const urlToFetch = "/note-delete/#{task.id}" 
+      fetch(urlToFetch, {
+        method: 'DELETE'
+      })
+      .then((response) => response.json())
+      .then(data =>{
+         window.location = `${data.redirection}`
+         })
+    })

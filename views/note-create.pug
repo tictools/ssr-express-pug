@@ -1,0 +1,11 @@
+extends layout 
+include ../components/nav-button
+include ../components/task-form
+
+block content 
+  
+  section(class='container')
+    div(class='section-header')
+      h2(class='section-header__title') CREATE TASK
+    +taskForm(task, categories, '/notes', 'Add')
+    +navButton('Back', '/notes')

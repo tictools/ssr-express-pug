@@ -1,0 +1,16 @@
+extends layout
+include ../components/nav-button
+include ../components/task-form   
+
+block content
+  
+  section(class='container')
+    div(class='section-header')
+      h2(class='section-header__title') UPDATE TASK
+    if task 
+      +taskForm(task, categories, `/note-detail/${id}`, 'Update')
+      +navButton('Back', `/note-detail/${id}`)
+    else 
+      p There is no task with id #{id}
+      +navButton('Back', `/note-detail/${id}`)
+    

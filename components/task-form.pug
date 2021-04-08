@@ -1,0 +1,28 @@
+mixin taskForm(task, categories, actionForm, buttonLabel)
+  div(class='form')
+    form(action=actionForm method='post')
+      div(class='form__block')
+        div(class='form__label')
+          label(for="task_name") Title
+        div
+          - const title = task ? task.title : ''
+          input(class="inputBox" type="text" id="task_name" name="task_name", value=title, required)
+      div(class='form__block')
+        div(class='form__label')
+          label(for="task_description") Description
+        div
+          textarea(class="textareaBox" type="text" id="task_description" name="task_description", required)= task ? task.description : ''
+      div(class='form__block')
+        div(class='form__label')
+          label(for="task_category") Category
+        select(class='form__select' type="text" id="task_description" name="task_category")
+          each category in categories
+            - const isSelected = task && task.category && task.category === category ? selected : null
+            option(class='form__option', value=`${category}` isSelected) #{category}
+      div(class='form__block')
+        div(class='form__label')
+          label(for="task_description") Completed
+          - const currentStatus = task && !!Number(task.status)
+          input(type="checkbox" id="task_status" name="task_status", value=1, checked=(currentStatus))
+      div(class='form__block')
+        button(type="submit" class="button button--submit")= buttonLabel      
